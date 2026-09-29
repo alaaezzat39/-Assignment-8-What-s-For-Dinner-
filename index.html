@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What's For Dinner</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style (4).css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">🍴</div>
+      <div>
+        <h1 class="brand-name">What's For Dinner</h1>
+        <p class="brand-sub">Your daily meal inspiration</p>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button id="headerSave" class="header-icon-btn" title="Saved recipes"><i class="fa-solid fa-bookmark"></i></button>
+      <button id="headerHistory" class="header-icon-btn" title="Recent"><i class="fa-solid fa-clock-rotate-left"></i></button>
+      <button id="headerSettings" class="header-icon-btn" title="Settings"><i class="fa-solid fa-gear"></i></button>
+      <div class="avatar"><img src="images/avatar-4 (1).jpg" alt="" width="40px" style="border-radius: 50%; "></div>
+    </div>
+  </header>
+
+  <div class="page">
+
+    <div class="image-col">
+      <div class="rating-chip">
+        <span class="star">★</span>
+        <span id="mealRating">4.8</span>
+        <span id="mealReviews" class="reviews">(234 reviews)</span>
+      </div>
+      <img id="mealImg" class="meal-img" src="" alt="">
+    </div>
+
+    <div class="content-col">
+
+      <div class="tags-row">
+        <span id="mealDifficulty" class="tag tag-green"></span>
+        <span id="mealCuisine" class="tag tag-blue"></span>
+      </div>
+
+      <div class="title-row">
+        <h1 id="mealName">Recipe name</h1>
+        <div class="icon-actions">
+          <button id="btnSave" class="icon-btn" title="Save"><i class="fa-solid fa-bookmark"></i></button>
+          <button id="btnShare" class="icon-btn" title="Share">🔗</button>
+        </div>
+      </div>
+
+      <p id="mealDesc" class="desc"></p>
+
+      <div id="warningBanner" class="warning hidden">
+        <span class="warning-icon">⚠️</span>
+        <div>
+          <strong>Extended Preparation Time</strong>
+          <p>This recipe requires more than 45 minutes to prepare. Plan accordingly!</p>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <button id="ingredientsBtn" class="tab-btn active" onclick="showIngredients()">
+          <i class="fa-solid fa-list-check"></i> Ingredients
+        </button>
+
+        <button id="instructionsBtn" class="tab-btn" onclick="showInstructions()">
+          <i class="fa-solid fa-book-open"></i> Instructions
+        </button>
+
+        <button id="nutritionBtn" class="tab-btn" onclick="showNutrition()">
+          <i class="fa-solid fa-chart-pie"></i> Nutrition
+        </button>
+
+        <button id="tipsBtn" class="tab-btn" onclick="showTips()">
+          <i class="fa-solid fa-lightbulb"></i> Chef's Tips
+        </button>
+      </div>
+
+      <div class="tab-panel-wrap">
+
+        <div id="panel-ingredients" class="tab-panel active">
+          <ol id="mealIngredients" class="ingredient-list"></ol>
+        </div>
+
+        <div id="panel-instructions" class="tab-panel">
+          <ol id="mealInstructions" class="instruction-list"></ol>
+        </div>
+
+        <div id="panel-nutrition" class="tab-panel">
+          <div class="calories" id="mealCalories">--- kcal</div>
+          <div class="nutrition-grid" id="nutritionGrid"></div>
+        </div>
+
+        <div id="panel-tips" class="tab-panel">
+          <ul id="mealTips" class="tips-list"></ul>
+        </div>
+
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat-icon">🕒</span>
+          <span class="stat-label">Prep Time</span>
+          <span id="mealPrep" class="stat-value">--</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">🔥</span>
+          <span class="stat-label">Cook Time</span>
+          <span id="mealCook" class="stat-value">--</span>
+        </div>
+        <div class="stat">
+          <span class="stat-icon">👥</span>
+          <span class="stat-label">Servings</span>
+          <span id="mealServings" class="stat-value">--</span>
+        </div>
+      </div>
+
+      <button id="btnRandom" class="btn-random">↻ Try Another Recipe</button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
